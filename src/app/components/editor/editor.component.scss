@@ -1,0 +1,49 @@
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    .content {
+        width: 100%;
+        max-width: 700px;
+        margin:auto;
+        h1 {
+            text-align: center;
+        }
+        .tool-bar {
+            background: #3f51b5;
+            .section {
+                display: flex;
+                border-left: 1px rgba(0,0,0,.12) solid;
+                border-right: 1px rgba(0,0,0,.12) solid;
+                padding: 0 10px;
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+                .tool {
+                    display: flex;
+                    background: transparent;
+                    border: none;
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.26);
+                    }
+                }
+            }
+        }
+        .contenteditable {
+            background: #ffffff;
+            height: 40vh;
+            border: solid #eee 1px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    }
+}

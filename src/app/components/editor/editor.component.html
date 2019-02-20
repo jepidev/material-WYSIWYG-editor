@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="content">
+        <h1>Material-WYSIWYG-Editor</h1>
+        <mat-toolbar class="tool-bar">
+          <div class="section">
+            <button class="tool" (click)="undo()"><i class="material-icons">undo</i></button>
+            <button class="tool" (click)="redo()"><i class="material-icons">redo</i></button>
+          </div>
+          <div class="section">
+            <button class="tool" (click)="bold()"><i class="material-icons">format_bold</i></button>
+            <button class="tool" (click)="italic()"><i class="material-icons">format_italic</i></button>
+            <button class="tool" (click)="underline()"><i class="material-icons">format_underlined</i></button>
+            <button class="tool" (click)="color()"><i class="material-icons">format_color_text</i></button>
+            <input matInput type="color" id="head" name="head" value="#e66465" [(ngModel)]="foreColor">
+            <button class="tool" (click)="backColorChange()"><i class="material-icons">format_color_fill</i></button>
+            <input matInput type="color" id="head" name="head" value="#e66465" [(ngModel)]="backColor">
+          </div>
+          <div class="section">
+            <button class="tool" (click)="link()"><i class="material-icons">insert_link</i></button>
+          </div>
+          <div class="section">
+              <button class="tool" (click)="alignLeft()"><i class="material-icons">format_align_left</i></button>
+              <button class="tool" (click)="alignCenter()"><i class="material-icons">format_align_center</i></button>
+              <button class="tool" (click)="alignRight()"><i class="material-icons">format_align_right</i></button>
+              <button class="tool" (click)="alignJustify()"><i class="material-icons">format_align_justify</i></button>
+            </div>
+        </mat-toolbar>
+        <div class="contenteditable" contenteditable></div>
+    </div>
+    
+  </div>
+  
