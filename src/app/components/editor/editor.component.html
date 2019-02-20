@@ -1,32 +1,52 @@
+
 <div class="container">
     <div class="content">
-        <h1>Material-WYSIWYG-Editor</h1>
         <mat-toolbar class="tool-bar">
           <div class="section">
             <button class="tool" (click)="undo()"><i class="material-icons">undo</i></button>
             <button class="tool" (click)="redo()"><i class="material-icons">redo</i></button>
           </div>
+          <!-- <div class="section">
+            <input matInput type="text" id="font-size" name="font-size" (change)="changeFontSize()" [(ngModel)]="fontSize">
+            <button (click)="changeFontSize()">Font Size</button>
+          </div> -->
+          <div class="section">
+              <mat-form-field class="headingStyle">
+                <mat-select [(value)]="headingValue">
+                  <mat-option value="<h1>"><h1>Title</h1></mat-option>
+                  <mat-option value="<h2>"><h2>Title 2</h2></mat-option>
+                  <mat-option value="<h3>"><h3>Title 3</h3></mat-option>
+                  <mat-option value="<p>"><p>Normal text</p></mat-option>
+                </mat-select>
+              </mat-form-field>
+            <button class="tool text" (click)="onHeading1Click()" alt="align-left">
+              <i class="material-icons">text_fields</i>
+            </button>
+          </div>
           <div class="section">
             <button class="tool" (click)="bold()"><i class="material-icons">format_bold</i></button>
             <button class="tool" (click)="italic()"><i class="material-icons">format_italic</i></button>
             <button class="tool" (click)="underline()"><i class="material-icons">format_underlined</i></button>
-            <button class="tool" (click)="color()"><i class="material-icons">format_color_text</i></button>
-            <input matInput type="color" id="head" name="head" value="#e66465" [(ngModel)]="foreColor">
-            <button class="tool" (click)="backColorChange()"><i class="material-icons">format_color_fill</i></button>
-            <input matInput type="color" id="head" name="head" value="#e66465" [(ngModel)]="backColor">
+            <button class="tool" (click)="color()" [ngStyle]="{ 'color': foreColor }"><i class="material-icons">format_color_text</i></button><button class="tool" (click)="foreColorChose()"><i class="material-icons arrow-down">arrow_drop_down</i></button>
+            <input matInput type="color" id="foreColor" name="head" value="#e66465" [(ngModel)]="foreColor">
+            <button class="tool" (click)="backColorChange()"><i class="material-icons" [ngStyle]="{ 'color': backColor }">format_color_fill</i></button><button class="tool" (click)="backColorChose()"><i class="material-icons arrow-down">arrow_drop_down</i></button>
+            <input matInput type="color" id="backColor" name="head" value="#e66465" [(ngModel)]="backColor">
           </div>
           <div class="section">
             <button class="tool" (click)="link()"><i class="material-icons">insert_link</i></button>
+            <button class="tool" (click)="addPicture()"><i class="material-icons">photo</i></button>
           </div>
           <div class="section">
-              <button class="tool" (click)="alignLeft()"><i class="material-icons">format_align_left</i></button>
-              <button class="tool" (click)="alignCenter()"><i class="material-icons">format_align_center</i></button>
-              <button class="tool" (click)="alignRight()"><i class="material-icons">format_align_right</i></button>
-              <button class="tool" (click)="alignJustify()"><i class="material-icons">format_align_justify</i></button>
-            </div>
+            <button class="tool" (click)="alignLeft()" alt="align-left"><i class="material-icons">format_align_left</i></button>
+            <button class="tool" (click)="alignCenter()" alt="align-center"><i class="material-icons">format_align_center</i></button>
+            <button class="tool" (click)="alignRight()" alt="align-right"><i class="material-icons">format_align_right</i></button>
+            <button class="tool" (click)="alignJustify()" alt="justify"><i class="material-icons">format_align_justify</i></button>
+          </div>
         </mat-toolbar>
-        <div class="contenteditable" contenteditable></div>
-    </div>
-    
+        <div class="contenteditable" id="contenteditable" contenteditable>
+          <div style="text-align: center;"><b style="font-size: 16px;">This is some formatted text made in the editor</b></div><div><b><br></b></div><div>You can change <font color="#ff0000">color</font>, add <span style="background-color: rgb(245, 255, 0);">background-color</span><span style="background-color: rgb(255, 255, 255);"> and event add <a href="http://google.com">link</a>!</span></div><div><br></div><div><u>Underline</u> or add some <i>italic</i> to your font.</div><div><br></div><div style="text-align: right;">You can even change the align of your text!</div>
+        </div>
+        <div class="preview"><button mat-button class="btn" (click)="preview()">Preview</button></div>
+    </div> 
   </div>
   
