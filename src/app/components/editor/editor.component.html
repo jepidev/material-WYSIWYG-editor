@@ -1,0 +1,47 @@
+
+<div class="container">
+    <div class="content">
+        <mat-toolbar class="tool-bar">
+          <div class="section">
+            <button class="tool" (click)="undo()"><i class="material-icons">undo</i></button>
+            <button class="tool" (click)="redo()"><i class="material-icons">redo</i></button>
+          </div>
+          <!-- <div class="section">
+            <input matInput type="text" id="font-size" name="font-size" (change)="changeFontSize()" [(ngModel)]="fontSize">
+            <button (click)="changeFontSize()">Font Size</button>
+          </div> -->
+          <div class="section">
+              <mat-form-field class="headingStyle">
+                <mat-select [(value)]="headingValue">
+                  <mat-option value="<h1>"><h1>Title</h1></mat-option>
+                  <mat-option value="<h2>"><h2>Title 2</h2></mat-option>
+                  <mat-option value="<h3>"><h3>Title 3</h3></mat-option>
+                  <mat-option value="<p>"><p>Normal text</p></mat-option>
+                </mat-select>
+              </mat-form-field>
+            <button class="tool text" (click)="onHeading1Click()">
+              <i class="material-icons">text_fields</i>
+            </button>
+          </div>
+          <div class="section">
+            <button class="tool" (click)="bold()"><i class="material-icons">format_bold</i></button>
+            <button class="tool" (click)="italic()"><i class="material-icons">format_italic</i></button>
+            <button class="tool" (click)="underline()"><i class="material-icons">format_underlined</i></button>
+            <button class="tool" (click)="color()" [ngStyle]="{ 'color': foreColor }"><i class="material-icons">format_color_text</i></button><button class="tool" (click)="foreColorChose()"><i class="material-icons arrow-down">arrow_drop_down</i></button>
+            <input matInput type="color" id="foreColor" name="head" value="#e66465" [(ngModel)]="foreColor">
+            <button class="tool" (click)="backColorChange()"><i class="material-icons" [ngStyle]="{ 'color': backColor }">format_color_fill</i></button><button class="tool" (click)="backColorChose()"><i class="material-icons arrow-down">arrow_drop_down</i></button>
+            <input matInput type="color" id="backColor" name="head" value="#e66465" [(ngModel)]="backColor">
+          </div>
+          <div class="section">
+            <button class="tool" (click)="alignLeft()" alt="align-left"><i class="material-icons">format_align_left</i></button>
+            <button class="tool" (click)="alignCenter()" alt="align-center"><i class="material-icons">format_align_center</i></button>
+            <button class="tool" (click)="alignRight()" alt="align-right"><i class="material-icons">format_align_right</i></button>
+          </div>
+        </mat-toolbar>
+        <div class="contenteditable" id="contenteditable" contenteditable>
+          <div _ngcontent-c1="" style="text-align: center;"><b _ngcontent-c1="" style="font-size: 16px;">This is some formatted text made in the editor</b></div><div _ngcontent-c1=""><b _ngcontent-c1=""><br _ngcontent-c1=""></b></div><div _ngcontent-c1="">You can change <font _ngcontent-c1="" color="#ff0000">color</font>, add <span _ngcontent-c1="" style="background-color: rgb(245, 255, 0);">background-color</span><span _ngcontent-c1="" style="background-color: rgb(255, 255, 255);"> and event add <a _ngcontent-c1="" href="http://google.com">link</a>!</span></div><div _ngcontent-c1=""><br _ngcontent-c1=""></div><div _ngcontent-c1=""><u _ngcontent-c1="">Underline</u> or add some <i _ngcontent-c1="">italic</i> to your font.</div><div _ngcontent-c1=""><br _ngcontent-c1=""></div><div _ngcontent-c1="" style="text-align: center;">You can even change the align of your text!</div><div _ngcontent-c1="" style="text-align: left;"><br _ngcontent-c1=""></div><h1 _ngcontent-c1="" style="text-align: left;">This is a Title</h1><h2 _ngcontent-c1="">This is a Title 2</h2><div _ngcontent-c1=""><h3 _ngcontent-c1="">This is a Title 3</h3></div>
+        </div>
+        <div class="preview"><button mat-button class="btn" (click)="preview()">Preview</button></div>
+    </div> 
+  </div>
+  

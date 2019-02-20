@@ -1,0 +1,100 @@
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    .content {
+        width: 100%;
+        height: 100%;
+        //max-width: 700px;
+        &::before {
+            content: '';
+            display: block;
+            background-color: #3f51b5;
+            width: 100%;
+            height: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .tool-bar {
+            background: rgba(0,0,0,.03);
+            overflow: scroll;
+            box-shadow: rgba(0,0,0,0.12) 0 1px 3px;
+            .section {
+                display: flex;
+                align-items: center;
+                border-left: 1px rgba(0,0,0,.12) solid;
+                border-right: 1px rgba(0,0,0,.12) solid;
+                padding: 0 10px;
+                height: 27px;
+                .headingStyle {
+                    width: 100px;
+                    font-size: 12px;
+                }
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+                .tool {
+                    display: flex;
+                    background: transparent;
+                    border: none;
+                    .material-icons {
+                        @media (max-width: 600px) {
+                            font-size: 12px;
+                        }
+                    }
+                    .arrow-down {
+                        margin: 0 -12px;
+                    }
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.26);
+                    }
+                }
+                .text {
+                    font-size: 18px;
+                }
+                #foreColor {
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                }
+                #backColor {
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                }
+            }
+        }
+        .contenteditable {
+            background: #ffffff;
+            height: 40vh;
+            border: solid #eee 1px;
+            padding: 10px;
+            min-height: calc(100% - 133px);
+            overflow: scroll;
+            box-sizing: border-box;
+        }
+        .preview {
+            height: 64px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+            box-shadow: rgba(0,0,0,0.12) 0 -1px 3px;
+            position: relative;
+            .btn {
+                margin-left: auto;
+            }
+        }
+    }
+}
