@@ -2,8 +2,6 @@
 
 This project is a beautiful minimalist WYSIWYG editor to generate HTML content. It is build Material Design components for Angular.
 
-## ![screencapture-localhost-4200-2019-02-20-17_04_42](/Users/desjardins/Downloads/screencapture-localhost-4200-2019-02-20-17_04_42.png)
-
 
 
 ## Run the application
