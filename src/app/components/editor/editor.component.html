@@ -19,7 +19,7 @@
                   <mat-option value="<p>"><p>Normal text</p></mat-option>
                 </mat-select>
               </mat-form-field>
-            <button class="tool text" (click)="onHeading1Click()" alt="align-left">
+            <button class="tool text" (click)="onHeading1Click()">
               <i class="material-icons">text_fields</i>
             </button>
           </div>
@@ -33,18 +33,13 @@
             <input matInput type="color" id="backColor" name="head" value="#e66465" [(ngModel)]="backColor">
           </div>
           <div class="section">
-            <button class="tool" (click)="link()"><i class="material-icons">insert_link</i></button>
-            <button class="tool" (click)="addPicture()"><i class="material-icons">photo</i></button>
-          </div>
-          <div class="section">
             <button class="tool" (click)="alignLeft()" alt="align-left"><i class="material-icons">format_align_left</i></button>
             <button class="tool" (click)="alignCenter()" alt="align-center"><i class="material-icons">format_align_center</i></button>
             <button class="tool" (click)="alignRight()" alt="align-right"><i class="material-icons">format_align_right</i></button>
-            <button class="tool" (click)="alignJustify()" alt="justify"><i class="material-icons">format_align_justify</i></button>
           </div>
         </mat-toolbar>
         <div class="contenteditable" id="contenteditable" contenteditable>
-          <div style="text-align: center;"><b style="font-size: 16px;">This is some formatted text made in the editor</b></div><div><b><br></b></div><div>You can change <font color="#ff0000">color</font>, add <span style="background-color: rgb(245, 255, 0);">background-color</span><span style="background-color: rgb(255, 255, 255);"> and event add <a href="http://google.com">link</a>!</span></div><div><br></div><div><u>Underline</u> or add some <i>italic</i> to your font.</div><div><br></div><div style="text-align: right;">You can even change the align of your text!</div>
+          <div _ngcontent-c1="" style="text-align: center;"><b _ngcontent-c1="" style="font-size: 16px;">This is some formatted text made in the editor</b></div><div _ngcontent-c1=""><b _ngcontent-c1=""><br _ngcontent-c1=""></b></div><div _ngcontent-c1="">You can change <font _ngcontent-c1="" color="#ff0000">color</font>, add <span _ngcontent-c1="" style="background-color: rgb(245, 255, 0);">background-color</span><span _ngcontent-c1="" style="background-color: rgb(255, 255, 255);"> and event add <a _ngcontent-c1="" href="http://google.com">link</a>!</span></div><div _ngcontent-c1=""><br _ngcontent-c1=""></div><div _ngcontent-c1=""><u _ngcontent-c1="">Underline</u> or add some <i _ngcontent-c1="">italic</i> to your font.</div><div _ngcontent-c1=""><br _ngcontent-c1=""></div><div _ngcontent-c1="" style="text-align: center;">You can even change the align of your text!</div><div _ngcontent-c1="" style="text-align: left;"><br _ngcontent-c1=""></div><h1 _ngcontent-c1="" style="text-align: left;">This is a Title</h1><h2 _ngcontent-c1="">This is a Title 2</h2><div _ngcontent-c1=""><h3 _ngcontent-c1="">This is a Title 3</h3></div>
         </div>
         <div class="preview"><button mat-button class="btn" (click)="preview()">Preview</button></div>
     </div> 
